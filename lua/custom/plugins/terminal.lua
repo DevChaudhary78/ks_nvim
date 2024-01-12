@@ -6,6 +6,6 @@ return {
     shell = "powershell",
     terminal_mappings = true,
     start_in_insert = true,
-    open_mapping = [[<c-\>]]
+    open_mapping = [[<c-_>]]
   },
 }
