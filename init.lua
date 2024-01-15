@@ -204,12 +204,12 @@ require('lazy').setup({
 -- [[ Setting options ]]
 -- See `:help vim.o`
 -- NOTE: You can change these options as you wish!
+-- Set Number and Relativenumber to ease the navigation
+vim.wo.relativenumber = true
+vim.wo.number = true
 
 -- Set highlight on search
 vim.o.hlsearch = false
-
--- Make line numbers default
-vim.wo.number = true
 
 -- Enable mouse mode
 vim.o.mouse = 'a'
