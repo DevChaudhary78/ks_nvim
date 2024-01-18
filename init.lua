@@ -598,7 +598,7 @@ cmp.setup {
 
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
---
+
 -- Set Neo-tree to hijack default Explorer
 vim.api.nvim_create_autocmd("VimEnter", {
   pattern = "*",

@@ -9,6 +9,13 @@ return {
       "rcarriga/nvim-notify",
     }
   },
+  -- Leap to perform that fast movement using s<char><char><Cr>
+  {
+    "ggandor/leap.nvim",
+    config = function()
+      require("leap").add_default_mappings()
+    end
+  },
   -- autopairs main keys like {, ', etc
   {
     "windwp/nvim-autopairs",
