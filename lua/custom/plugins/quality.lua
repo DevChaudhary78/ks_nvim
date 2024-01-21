@@ -34,36 +34,39 @@ return {
   {
     'stevearc/dressing.nvim',
     opts = {},
-    config = function()
-      require('dressing').setup({
-        select = {
-          get_config = function(opts)
-            if opts.kind == 'codeaction' then
-              return {
-                backend = 'nui',
-                nui = {
-                  relative = 'cursor',
-                  max_width = 40,
-                }
-              }
-            end
-          end
-        }
-      })
-    end
+    -- config = function()
+    --   require('dressing').setup({
+    --     select = {
+    --       get_config = function(opts)
+    --         if opts.kind == 'codeaction' then
+    --           return {
+    --             backend = 'nui',
+    --             nui = {
+    --               relative = 'cursor',
+    --               max_width = 40,
+    --             }
+    --           }
+    --         end
+    --       end
+    --     }
+    --   })
+    -- end
   },
   -- Extends the feature for tabs and tab controls (extends the features with telescope)
   {
     "akinsho/bufferline.nvim",
     event = "VeryLazy",
-    keys = {
-      { "<leader>bp", "<Cmd>BufferLineTogglePin<CR>",            desc = "Toggle pin" },
-      { "<leader>bP", "<Cmd>BufferLineGroupClose ungrouped<CR>", desc = "Delete non-pinned buffers" },
-      { "<leader>bo", "<Cmd>BufferLineCloseOthers<CR>",          desc = "Delete other buffers" },
-      { "<leader>br", "<Cmd>BufferLineCloseRight<CR>",           desc = "Delete buffers to the right" },
-      { "<leader>bl", "<Cmd>BufferLineCloseLeft<CR>",            desc = "Delete buffers to the left" },
-      { "<S-h>",      "<cmd>BufferLineCyclePrev<cr>",            desc = "Prev buffer" },
-      { "<S-l>",      "<cmd>BufferLineCycleNext<cr>",            desc = "Next buffer" },
-    },
+    config = function()
+      require("bufferline").setup {
+        options = {
+          mode = "buffers",
+          buffer_close_icon = '󰅖',
+          modified_icon = '●',
+          close_icon = '',
+          left_trunc_marker = '',
+          right_trunc_marker = '',
+        }
+      }
+    end
   }
 }
