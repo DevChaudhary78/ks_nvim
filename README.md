@@ -9,8 +9,8 @@ rm -rf ~/.config/nvim
 ```
 After your 'nvim' directory is empty, you can run the following command to install this configuration
 ```viml
-git clone https://github.com/DevChaudhary78/minimal_nvim_config \
-"${XDG_CONFIG_HOME:-$HOME}/.config"
+git clone https://github.com/DevChaudhary78/ks_nvim \
+"${XDG_CONFIG_HOME:-$HOME}/.config/nvim"
 ```
 - Windows (powershell)
 remove this file
@@ -19,7 +19,7 @@ $env:USERPROFILE\AppData\Local\nvim
 ```
 After your 'nvim' directory is empty, you can run the following command to install this configuration
 ```viml
-git clone https://github.com/DevChaudhary78/minimal_nvim_config \
+git clone https://github.com/DevChaudhary78/ks_nvim \
 "$env:USERPROFILE\AppData\Local\nvim"
 ```
 - Windows (cmd)
