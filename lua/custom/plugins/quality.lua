@@ -1,5 +1,4 @@
 return {
-  -- Decorating Commandline
   {
     "folke/noice.nvim",
     event = "VeryLazy",
@@ -34,23 +33,38 @@ return {
   {
     'stevearc/dressing.nvim',
     opts = {},
-    config = function()
-      require('dressing').setup({
-        select = {
-          get_config = function(opts)
-            if opts.kind == 'codeaction' then
-              return {
-                backend = 'nui',
-                nui = {
-                  relative = 'cursor',
-                  max_width = 40,
-                }
-              }
-            end
-          end
-        }
-      })
-    end
+    -- config = function()
+    --   require('dressing').setup({
+    --     select = {
+    --       get_config = function(opts)
+    --         if opts.kind == 'codeaction' then
+    --           return {
+    --             backend = 'nui',
+    --             nui = {
+    --               position = "50%",
+    --               size = nil,
+    --               relative = "editor",
+    --               border = {
+    --                 style = "rounded",
+    --               },
+    --               buf_options = {
+    --                 swapfile = false,
+    --                 filetype = "DressingSelect",
+    --               },
+    --               win_options = {
+    --                 winblend = 0,
+    --               },
+    --               max_width = 80,
+    --               max_height = 40,
+    --               min_width = 40,
+    --               min_height = 10,
+    --             },
+    --           }
+    --         end
+    --       end
+    --     }
+    --   })
+    -- end
   },
   -- Extends the feature for tabs and tab controls (extends the features with telescope)
   {
