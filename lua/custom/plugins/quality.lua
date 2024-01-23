@@ -34,29 +34,15 @@ return {
   {
     'stevearc/dressing.nvim',
     opts = {},
-    -- config = function()
-    --   require('dressing').setup({
-    --     select = {
-    --       get_config = function(opts)
-    --         if opts.kind == 'codeaction' then
-    --           return {
-    --             backend = 'nui',
-    --             nui = {
-    --               relative = 'cursor',
-    --               max_width = 40,
-    --             }
-    --           }
-    --         end
-    --       end
-    --     }
-    --   })
-    -- end
   },
   -- Extends the feature for tabs and tab controls (extends the features with telescope)
   {
     "akinsho/bufferline.nvim",
     event = "VeryLazy",
     config = function()
+      vim.keymap.set("n", "<S-h>", "<Cmd>BufferLineCyclePrev<Cr>",
+        { noremap = true, silent = true, desc = "Previous Tab" })
+      vim.keymap.set("n", "<S-l>", "<Cmd>BufferLineCycleNext<Cr>", { noremap = true, silent = true, desc = "Next Tab" })
       require("bufferline").setup {
         options = {
           mode = "buffers",
