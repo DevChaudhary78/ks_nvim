@@ -34,23 +34,23 @@ return {
   {
     'stevearc/dressing.nvim',
     opts = {},
-    config = function()
-      require('dressing').setup({
-        select = {
-          get_config = function(opts)
-            if opts.kind == 'codeaction' then
-              return {
-                backend = 'nui',
-                nui = {
-                  relative = 'cursor',
-                  max_width = 40,
-                }
-              }
-            end
-          end
-        }
-      })
-    end
+    -- config = function()
+    --   require('dressing').setup({
+    --     select = {
+    --       get_config = function(opts)
+    --         if opts.kind == 'codeaction' then
+    --           return {
+    --             backend = 'nui',
+    --             nui = {
+    --               relative = 'cursor',
+    --               max_width = 40,
+    --             }
+    --           }
+    --         end
+    --       end
+    --     }
+    --   })
+    -- end
   },
   -- Extends the feature for tabs and tab controls (extends the features with telescope)
   {
