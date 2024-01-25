@@ -18,7 +18,8 @@ return {
       { text = " ", texthl = "DiagnosticSignInfo" })
     vim.fn.sign_define("DiagnosticSignHint",
       { text = "󰌵", texthl = "DiagnosticSignHint" })
-    vim.keymap.set("n", "<leader>bf", ":Neotree buffers reveal float<Cr>", { noremap = true })
+    vim.keymap.set("n", "<leader>bf", "<Cmd>Neotree buffers reveal float<Cr>", { noremap = true })
+    vim.keymap.set("n", "<leader>q", "<Cmd>bd<Cr>")
 
     require("neo-tree").setup({
       close_if_last_window = true,
