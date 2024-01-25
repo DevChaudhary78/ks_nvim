@@ -9,6 +9,11 @@ return {
       "rcarriga/nvim-notify",
     }
   },
+  {
+    "RRethy/vim-illuminate"
+  },
+  { 'echasnovski/mini.nvim', version = '*' },
+
   -- Leap to perform that fast movement using s<char><char><Cr>
   {
     "ggandor/leap.nvim",
