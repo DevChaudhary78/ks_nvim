@@ -12,15 +12,37 @@ return {
   {
     "RRethy/vim-illuminate"
   },
-  { 'echasnovski/mini.nvim', version = '*' },
 
-  -- Leap to perform that fast movement using s<char><char><Cr>
   {
-    "ggandor/leap.nvim",
+    'echasnovski/mini.nvim',
+    version = '*',
     config = function()
-      require("leap").add_default_mappings()
+      require("mini.surround").setup(
+        {
+          mappings = {
+            add = 'sa',            -- Add surrounding in Normal and Visual modes
+            delete = 'sd',         -- Delete surrounding
+            find = 'sf',           -- Find surrounding (to the right)
+            find_left = 'sF',      -- Find surrounding (to the left)
+            highlight = 'sh',      -- Highlight surrounding
+            replace = 'sr',        -- Replace surrounding
+            update_n_lines = 'sn', -- Update `n_lines`
+
+            suffix_last = 'l',     -- Suffix to search with "prev" method
+            suffix_next = 'n',     -- Suffix to search with "next" method
+          },
+        }
+      )
     end
   },
+
+  -- Leap to perform that fast movement using s<char><char><Cr>
+  -- {
+  --   "ggandor/leap.nvim",
+  --   config = function()
+  --     require("leap").add_default_mappings()
+  --   end
+  -- },
   -- autopairs main keys like {, ', etc
   {
     "windwp/nvim-autopairs",
