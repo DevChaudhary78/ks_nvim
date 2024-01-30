@@ -8,6 +8,7 @@ local config = {
   },
 }
 
+-- Change configuration based on OS
 if jit.os == 'OSX' then
   config.opts.shell = vim.o.shell
   config.opts.open_mapping = [[<C-/>]]
