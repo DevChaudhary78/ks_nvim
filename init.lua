@@ -124,10 +124,12 @@ require('lazy').setup({
   },
   {
     -- Theme inspired by Atom
-    'navarasu/onedark.nvim',
+    "rebelot/kanagawa.nvim",
     priority = 1000,
     config = function()
-      vim.cmd.colorscheme 'onedark'
+      vim.cmd("colorscheme kanagawa")
+      vim.o.number = true
+      vim.o.relativenumber = true
     end,
   },
 
@@ -200,13 +202,6 @@ require('lazy').setup({
   --    For additional information see: https://github.com/folke/lazy.nvim#-structuring-your-plugins
   { import = 'custom.plugins' },
 }, {})
-
--- [[ Setting options ]]
--- See `:help vim.o`
--- NOTE: You can change these options as you wish!
--- Set Number and Relativenumber to ease the navigation
-vim.wo.relativenumber = true
-vim.wo.number = true
 
 -- Set highlight on search
 vim.o.hlsearch = false
