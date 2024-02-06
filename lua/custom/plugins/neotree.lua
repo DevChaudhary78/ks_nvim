@@ -25,6 +25,9 @@ return {
       popup_border_style = "rounded",
       filesystem = {
         hijack_netrw_behaviour = "open_default",
+        filtered_items = {
+          hide_hidden = false,
+        }
       },
 
       window = {

@@ -123,14 +123,13 @@ require('lazy').setup({
     opts
   },
   {
-    -- Theme inspired by Atom
-    "rebelot/kanagawa.nvim",
+    "savq/melange-nvim",
     priority = 1000,
     config = function()
-      vim.cmd("colorscheme kanagawa")
+      vim.cmd("colorscheme melange")
       vim.o.number = true
       vim.o.relativenumber = true
-    end,
+    end
   },
 
   {
