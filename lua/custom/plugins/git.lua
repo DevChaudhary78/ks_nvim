@@ -26,6 +26,9 @@ return {
       vim.keymap.set("n", "<leader>lg", ":LazyGit<Cr>", { desc = "[L]azy [G]it" })
     end
   },
+  -- {
+  --   'f-person/git-blame.nvim'
+  -- },
   {
     -- Adds git related signs to the gutter, as well as utilities for managing changes
     'lewis6991/gitsigns.nvim',

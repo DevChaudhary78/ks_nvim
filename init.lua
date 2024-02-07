@@ -123,15 +123,14 @@ require('lazy').setup({
     opts
   },
   {
-    "savq/melange-nvim",
-    priority = 1000,
+    "rose-pine/neovim",
+    name = "rose-pine",
     config = function()
-      vim.cmd("colorscheme melange")
+      vim.cmd("colorscheme rose-pine")
       vim.o.number = true
       vim.o.relativenumber = true
     end
   },
-
   {
     -- Set lualine as statusline
     'nvim-lualine/lualine.nvim',
