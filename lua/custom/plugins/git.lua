@@ -1,16 +1,6 @@
 return {
   { 'akinsho/git-conflict.nvim', version = "*", config = true },
   {
-    "kdheepak/lazygit.nvim",
-    -- optional for floating window border decoration
-    dependencies = {
-      "nvim-lua/plenary.nvim",
-    },
-    config = function()
-      vim.keymap.set("n", "<leader>lg", ":LazyGit<Cr>", { desc = "[L]azy [G]it" })
-    end
-  },
-  {
     -- Adds git related signs to the gutter, as well as utilities for managing changes
     'lewis6991/gitsigns.nvim',
     opts = {
