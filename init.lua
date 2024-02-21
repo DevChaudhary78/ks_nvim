@@ -49,6 +49,9 @@ vim.o.shiftwidth = 4
 vim.o.expandtab = true
 vim.o.smartindent = true
 
+-- to improve loading time
+vim.loader.enable()
+
 -- [[ Install `lazy.nvim` plugin manager ]]
 --    https://github.com/folke/lazy.nvim
 --    `:help lazy.nvim.txt` for more info
@@ -598,13 +601,13 @@ cmp.setup {
 -- vim: ts=2 sts=2 sw=2 et
 
 -- Set Neo-tree to hijack default Explorer
-vim.api.nvim_create_autocmd("VimEnter", {
-  pattern = "*",
-  group = vim.api.nvim_create_augroup("NeotreeOnOpen", { clear = true }),
-  once = true,
-  callback = function(_)
-    if vim.fn.argc() == 0 then
-      vim.cmd("Neotree")
-    end
-  end,
-})
+-- vim.api.nvim_create_autocmd("VimEnter", {
+--   pattern = "*",
+--   group = vim.api.nvim_create_augroup("NeotreeOnOpen", { clear = true }),
+--   once = true,
+--   callback = function(_)
+--     if vim.fn.argc() == 0 then
+--       vim.cmd("Neotree")
+--     end
+--   end,
+-- })

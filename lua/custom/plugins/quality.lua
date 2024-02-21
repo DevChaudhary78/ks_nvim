@@ -51,5 +51,9 @@ return {
         },
       })
     end
+  },
+  -- To log the performance using <Cmd>StartupTime<Cr>
+  {
+    "dstein64/vim-startuptime",
   }
 }
