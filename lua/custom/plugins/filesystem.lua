@@ -51,7 +51,7 @@ return {
       })
 
       for i = 1, 5 do
-        vim.api.nvim_set_keymap('n', '<leader>' .. i, [[:lua require("harpoon.ui").nav_file(]] .. i .. [[)<CR>]], {
+        vim.api.nvim_set_keymap('n', '' .. i, [[:lua require("harpoon.ui").nav_file(]] .. i .. [[)<CR>]], {
           noremap = true,
           desc = "Toggle through files using workspace keymaps"
         })
