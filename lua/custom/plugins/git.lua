@@ -1,34 +1,7 @@
 return {
-  { 'akinsho/git-conflict.nvim', version = "*", config = true },
-  -- {
-  --   "NeogitOrg/neogit",
-  --   dependencies = {
-  --     "nvim-lua/plenary.nvim",  -- required
-  --     "sindrets/diffview.nvim", -- optional - Diff integration
-  --
-  --     -- Only one of these is needed, not both.
-  --     "nvim-telescope/telescope.nvim", -- optional
-  --     "ibhagwan/fzf-lua",              -- optional
-  --   },
-  --   config = function()
-  --     require("neogit").setup({
-  --       vim.keymap.set("n", "<leader>ng", ":Neogit<Cr>", { desc = "Open [N]eo[G]it", noremap = true })
-  --     })
-  --   end
-  -- },
   {
-    "kdheepak/lazygit.nvim",
-    -- optional for floating window border decoration
-    dependencies = {
-      "nvim-lua/plenary.nvim",
-    },
-    config = function()
-      vim.keymap.set("n", "<leader>lg", ":LazyGit<Cr>", { desc = "[L]azy [G]it" })
-    end
+    'f-person/git-blame.nvim'
   },
-  -- {
-  --   'f-person/git-blame.nvim'
-  -- },
   {
     -- Adds git related signs to the gutter, as well as utilities for managing changes
     'lewis6991/gitsigns.nvim',

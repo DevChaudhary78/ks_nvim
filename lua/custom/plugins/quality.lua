@@ -34,7 +34,7 @@ return {
   },
   -- Mini.surround the make surround process much more painless
   {
-    "echasnovski/mini.surround",
+    'echasnovski/mini.surround',
     config = function()
       require("mini.surround").setup({
         mappings = {
@@ -52,8 +52,4 @@ return {
       })
     end
   },
-  -- To log the performance using <Cmd>StartupTime<Cr>
-  {
-    "dstein64/vim-startuptime",
-  }
 }

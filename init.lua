@@ -280,6 +280,9 @@ require('telescope').setup {
         ['<C-d>'] = false,
       },
     },
+    theme = {
+
+    }
   },
 }
 
@@ -504,10 +507,10 @@ require('mason-lspconfig').setup()
 --  define the property 'filetypes' to the map in question.
 local servers = {
   clangd = {},
-  -- gopls = {},
-  -- pyright = {},
-  -- rust_analyzer = {},
-  -- tsserver = {},
+  gopls = {},
+  pyright = {},
+  rust_analyzer = {},
+  tsserver = {},
   html = { filetypes = { 'html', 'twig', 'hbs' } },
 
   lua_ls = {
@@ -533,6 +536,12 @@ local mason_lspconfig = require 'mason-lspconfig'
 mason_lspconfig.setup {
   ensure_installed = vim.tbl_keys(servers),
 }
+
+local nvim_lsp = require("lspconfig")
+
+nvim_lsp.clangd.setup({
+  cmd = { "clangd", "--query-driver='C:\\MinGW\\bin\\gcc.exe'" }
+})
 
 mason_lspconfig.setup_handlers {
   function(server_name)
