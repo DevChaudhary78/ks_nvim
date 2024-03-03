@@ -64,5 +64,11 @@ return {
         url = "https://vtip.43z.one", -- Or https://vimiscool.tech/neotip
       })
     end,
+  },
+  {
+    'NvChad/nvim-colorizer.lua',
+    config = function()
+      require('colorizer').setup()
+    end
   }
 }
