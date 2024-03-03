@@ -91,14 +91,25 @@ require('lazy').setup({
     end,
     opts
   },
+  -- {
+  --   "rose-pine/neovim",
+  --   name = "rose-pine",
+  --   config = function()
+  --     vim.cmd("colorscheme rose-pine")
+  --     vim.o.number = true
+  --     vim.o.relativenumber = true
+  --   end
+  -- },
   {
-    "rose-pine/neovim",
-    name = "rose-pine",
+    "ellisonleao/gruvbox.nvim",
+    priority = 1000,
     config = function()
-      vim.cmd("colorscheme rose-pine")
+      vim.o.background = "dark"
+      vim.cmd([[colorscheme gruvbox]])
       vim.o.number = true
       vim.o.relativenumber = true
-    end
+    end,
+    opts = ...
   },
   {
     -- Set lualine as statusline
