@@ -241,10 +241,17 @@ require('telescope').setup {
         ['<C-d>'] = false,
       },
     },
+    sorting_strategy = 'ascending',
+    layout_strategy = 'vertical',
     theme = {
-
+      'gruvbox'
     }
   },
+  pickers = {
+    colorscheme = {
+      enable_preview = true,
+    },
+  }
 }
 
 -- Enable telescope fzf native, if installed
