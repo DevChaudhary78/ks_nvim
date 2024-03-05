@@ -1,5 +1,6 @@
 local config = {
   'akinsho/toggleterm.nvim',
+  event = "VeryLazy",
   version = "*",
   opts = {
     direction = 'float',
