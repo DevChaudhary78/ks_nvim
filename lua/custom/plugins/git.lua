@@ -75,5 +75,23 @@ return {
         map({ 'o', 'x' }, 'ih', ':<C-U>Gitsigns select_hunk<CR>', { desc = 'select git hunk' })
       end,
     },
-  }
+  },
+  {
+    "kdheepak/lazygit.nvim",
+    event = "VeryLazy",
+    cmd = {
+      "LazyGit",
+      "LazyGitConfig",
+      "LazyGitCurrentFile",
+      "LazyGitFilter",
+      "LazyGitFilterCurrentFile",
+    },
+    -- optional for floating window border decoration
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+    },
+    config = function()
+      vim.keymap.set('n', '<leader>lg', '<Cmd>LazyGit<Cr>', { noremap = true })
+    end
+  },
 }
