@@ -22,6 +22,10 @@ return {
     end,
   },
   {
+    'stevearc/dressing.nvim',
+    opts = {},
+  },
+  {
     "arnamak/stay-centered.nvim",
     config = function()
       require("stay-centered").setup()
