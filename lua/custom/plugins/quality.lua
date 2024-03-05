@@ -52,4 +52,38 @@ return {
       })
     end
   },
+  {
+    "TobinPalmer/Tip.nvim",
+    event = "VimEnter",
+    init = function()
+      -- Default config
+      --- @type Tip.config
+      require("tip").setup({
+        seconds = 2,
+        title = "Tip!",
+        url = "https://vtip.43z.one", -- Or https://vimiscool.tech/neotip
+      })
+    end,
+  },
+  {
+    'NvChad/nvim-colorizer.lua',
+    config = function()
+      require('colorizer').setup()
+    end
+  },
+
+  {
+    "michaelb/sniprun",
+    branch = "master",
+
+    build = "sh install.sh",
+    -- do 'sh install.sh 1' if you want to force compile locally
+    -- (instead of fetching a binary from the github release). Requires Rust >= 1.65
+
+    config = function()
+      require("sniprun").setup({
+        -- your options
+      })
+    end,
+  },
 }
