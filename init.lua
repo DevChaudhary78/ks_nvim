@@ -10,7 +10,6 @@ vim.o.shiftwidth = 4
 vim.o.expandtab = true
 vim.o.smartindent = true
 
-
 -- to improve loading time
 vim.loader.enable()
 
@@ -253,17 +252,10 @@ require('telescope').setup {
         ['<C-d>'] = false,
       },
     },
-    sorting_strategy = 'ascending',
-    layout_strategy = 'vertical',
     theme = {
-      'gruvbox'
+
     }
   },
-  pickers = {
-    colorscheme = {
-      enable_preview = true,
-    },
-  }
 }
 
 -- Enable telescope fzf native, if installed
@@ -550,11 +542,11 @@ cmp.setup {
     ['<C-b>'] = cmp.mapping.scroll_docs(-4),
     ['<C-f>'] = cmp.mapping.scroll_docs(4),
     ['<C-Space>'] = cmp.mapping.complete {},
-    ['<C-y>'] = cmp.mapping.confirm {
+    ['<Tab>'] = cmp.mapping.confirm {
       behavior = cmp.ConfirmBehavior.Replace,
       select = true,
     },
-    ['<C-l>'] = cmp.mapping(function(fallback)
+    ['<C-Tab>'] = cmp.mapping(function(fallback)
       if cmp.visible() then
         cmp.select_next_item()
       elseif luasnip.expand_or_locally_jumpable() then
@@ -563,7 +555,7 @@ cmp.setup {
         fallback()
       end
     end, { 'i', 's' }),
-    ['<C-h>'] = cmp.mapping(function(fallback)
+    ['<C-S-Tab>'] = cmp.mapping(function(fallback)
       if cmp.visible() then
         cmp.select_prev_item()
       elseif luasnip.locally_jumpable(-1) then
