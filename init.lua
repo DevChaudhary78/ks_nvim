@@ -91,15 +91,6 @@ require('lazy').setup({
     end,
     opts
   },
-  -- {
-  --   "rose-pine/neovim",
-  --   name = "rose-pine",
-  --   config = function()
-  --     vim.cmd("colorscheme rose-pine")
-  --     vim.o.number = true
-  --     vim.o.relativenumber = true
-  --   end
-  -- },
   {
     "ellisonleao/gruvbox.nvim",
     priority = 1000,
@@ -252,9 +243,8 @@ require('telescope').setup {
         ['<C-d>'] = false,
       },
     },
-    theme = {
-
-    }
+    sorting_strategy = "ascending",
+    layout_strategy = "vertical",
   },
 }
 
