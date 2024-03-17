@@ -561,3 +561,10 @@ cmp.setup {
     { name = 'path' },
   },
 }
+
+-- Configure <C-BS> to delete whole word
+local function delete_word()
+  vim.api.nvim_feedkeys(vim.api.nvim_replace_termcodes("<C-w>", true, false, true), "i", true)
+end
+
+vim.keymap.set("i", "<C-BS>", delete_word, { noremap = true, silent = true });
