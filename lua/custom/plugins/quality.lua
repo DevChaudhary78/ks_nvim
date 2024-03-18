@@ -44,12 +44,12 @@ return {
     'stevearc/dressing.nvim',
     opts = {},
   },
-  {
-    "arnamak/stay-centered.nvim",
-    config = function()
-      require("stay-centered").setup()
-    end
-  },
+  -- {
+  --   "arnamak/stay-centered.nvim",
+  --   config = function()
+  --     require("stay-centered").setup()
+  --   end
+  -- },
   -- Mini.surround the make surround process much more painless
   {
     'echasnovski/mini.surround',

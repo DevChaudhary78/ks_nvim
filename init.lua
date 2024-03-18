@@ -10,6 +10,8 @@ vim.o.shiftwidth = 4
 vim.o.expandtab = true
 vim.o.smartindent = true
 
+vim.o.scrolloff = 999
+
 -- to improve loading time
 vim.loader.enable()
 
