@@ -44,13 +44,6 @@ return {
     'stevearc/dressing.nvim',
     opts = {},
   },
-  -- {
-  --   "arnamak/stay-centered.nvim",
-  --   config = function()
-  --     require("stay-centered").setup()
-  --   end
-  -- },
-  -- Mini.surround the make surround process much more painless
   {
     'echasnovski/mini.surround',
     config = function()
@@ -103,5 +96,16 @@ return {
         -- your options
       })
     end,
+  },
+  {
+    "Exafunction/codeium.nvim",
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+      "hrsh7th/nvim-cmp",
+      "onsails/lspkind.nvim"
+    },
+    config = function()
+      require("codeium").setup({})
+    end
   },
 }
