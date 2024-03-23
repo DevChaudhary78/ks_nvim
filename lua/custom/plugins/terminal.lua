@@ -1,21 +1,15 @@
 local config = {
   'akinsho/toggleterm.nvim',
   event = "VeryLazy",
-  version = "*",
   opts = {
-    direction = 'float',
-    terminal_mappings = true,
-    start_in_insert = true,
-  },
+    direction = "float",
+    open_mapping = [[<C-_>]],
+    insert_mappings = true,
+  }
 }
 
--- Change configuration based on OS
 if jit.os == 'OSX' then
-  config.opts.shell = vim.o.shell
   config.opts.open_mapping = [[<C-/>]]
-elseif jit.os == 'Windows' then
-  config.opts.shell = "cmd"
-  config.opts.open_mapping = [[<C-_>]]
 end
 
 return config
